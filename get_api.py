@@ -10,16 +10,19 @@ app = FastAPI()
 
 @app.post('/')
 async def get_network_coverage(item: Item):
-    # Read CSV file
-    df = read_csv(CSV_FILE_WITH_ADDRESS)
-    df.fillna('', inplace=True)
-    # Get city name
-    city_name, postal_code = get_city_name(item.address)
-    results = find_address(df, "address", city_name, postal_code)
-    print(results)
-    # Process the dataframe
-    results_processed = process_dataframe_results(results)
-    return {"item": item, "coverage": results_processed}
+    try:
+        # Read CSV file
+        df = read_csv(CSV_FILE_WITH_ADDRESS)
+        df.fillna('', inplace=True)
+        # Get city name
+        city_name, postal_code = get_city_name(item.address)
+        results = find_address(df, "address", city_name, postal_code)
+        print(results)
+        # Process the dataframe
+        results_processed = process_dataframe_results(results)
+        return {"item": item, "coverage": results_processed}
+    except Exception as exp:
+        print("Error when reading the csv file : {}.".format(exp))
 
 
 input = {

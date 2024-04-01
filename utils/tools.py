@@ -34,7 +34,7 @@ def read_csv(csv_file):
 
 def find_address(dataframe, column_to_search, city_name, postal_code):
     """Find the address with the postal_code and the cityname.
-    For example, search ...75012 Paris in 10 rue de l'espérance 7501 Paris.
+    For example, search ...75012 Paris in 10 rue de l'espérance 75012 Paris.
 
     Args:
         dataframe (Dataframe): The dataframe where to search
