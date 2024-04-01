@@ -23,7 +23,7 @@ A new column is created to have addresses from the X,Y of the input CSV file. Th
 
 This librairy handles multi threads, so it's conveniant to use it to handle the multiple lines of the CSV file.
 
-The new file is called **results_address.csv**.
+The new file generated is called **results_address.csv**.
 
 4. Get the results
 
