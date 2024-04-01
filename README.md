@@ -41,3 +41,12 @@ In Postman for example, call the api with query like in the following image :
 ![image info](img/api_fastapi.png)
 
 We shoud get the expected results like showed in the image.
+
+
+5. Launch test
+
+To launch unit tests, add the following command :
+
+```bash
+py -m unittest test\test_api_functions.py
+```
