@@ -23,6 +23,8 @@ A new column is created to have addresses from the X,Y of the input CSV file. Th
 
 This librairy handles multi threads, so it's conveniant to use it to handle the multiple lines of the CSV file.
 
+With X,Y from the **2018_01_Sites_mobiles_2G_3G_4G_France_metropolitaine_L93_ver2.csv** file, get the address from the **API GOUV reverse** function, and create the new column.
+
 The new file generated is called **results_address.csv**.
 
 4. Get the results
@@ -31,7 +33,7 @@ To have the results of the coverage of the input cities, you shoud do the follow
 ```bash
 cd papernest
 
-uvicorn get_api:app --reload
+uvicorn get_network_cov:app --reload
 ```
 
 5. Test the api
